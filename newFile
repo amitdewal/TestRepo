@@ -1,0 +1,51 @@
+package assignment3;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class CheckAnagram {
+
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.print("enter the words: ");
+		String s1 = sc.nextLine();
+		String s2 = sc.nextLine();
+	
+		s1 = s1.toLowerCase();
+		s2= s2.toLowerCase();
+		
+		if(s1.length()==s2.length())
+		{
+			char [] cArray1=s1.toCharArray();
+			char[] cArray2=s2.toCharArray();
+			
+			Arrays.sort(cArray1);
+			Arrays.sort(cArray2);
+			
+			boolean result=Arrays.equals(cArray1, cArray2);
+			
+			if(result) 
+			{
+				System.out.println(s1+" and "+s2+" are Anagram");
+			}
+			else 
+			{
+				System.out.println(s1+" and "+s2+" are not Anagram");
+			}
+			
+			
+			
+			
+			
+		} else 
+		{
+			System.out.println(s1+" and "+s2+" are not Anagram");
+		}
+	
+	
+		
+
+	}
+
+}
